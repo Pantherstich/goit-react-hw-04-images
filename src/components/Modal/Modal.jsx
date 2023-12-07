@@ -20,14 +20,6 @@ export const Modal = ({ closeModal, modalData }) => {
       closeModal();
     }
   };
-  // componentDidMount() {
-  //   window.addEventListener('keydown', this.handleKeyDown);
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener('keydown', this.handleKeyDown);
-  // }
-
   return (
     <Overlay onClick={handleBackdropClick}>
       <ModalWindow>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Searchbar } from './Searchbar/Searchbar';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { Wrapper, Error } from './App.styled';
@@ -23,7 +23,6 @@ export const App = () => {
   const handleLoadClick = prevState => {
     setPage(page + 1);
   };
-  // };
 
   const setSetModalData = (img, tags) => {
     setShowModal(true);
@@ -61,58 +60,6 @@ export const App = () => {
         .finally(setIsLoader(false));
     }
   }, [nameSearch, page]);
-
-  // componentDidUpdate(_, prevState) {
-  //   const PrevState = prevState.nameSearch;
-  //   const NextState = this.state.nameSearch;
-  //   const { page } = this.state;
-
-  //   if (PrevState !== NextState || page !== prevState.page) {
-  //     this.setState({ isLoader: true, loadMore: false, error: null });
-
-  //     const searchService = new SearchService(NextState, page);
-  //     searchService
-  //       .fetchImg(page)
-  //       .then(images => {
-  //         if (images.hits.length > 0) {
-  //           this.setState(prevState => ({
-  //             images:
-  //               page === 1
-  //                 ? images.hits
-  //                 : [...prevState.images, ...images.hits],
-  //             loadMore: page < Math.ceil(images.totalHits / 12),
-  //           }));
-  //         } else {
-  //           this.setState({
-  //             images: [],
-  //             error: 'Oops... there are no images matching your search...',
-  //           });
-  //         }
-  //       })
-  //       .catch(error => {
-  //         this.setState({ images: [], error });
-  //       })
-  //       .finally(this.setState({ isLoader: false }));
-  //   }
-  // }
-  // const handleSubmit = nameSearch => {
-  //   setNameSearch(nameSearch);
-  //   setPage(1);
-  // };
-
-  // comst handleLoadClick = prevState => {
-  //   setPage( page + 1 );
-  // };
-
-  // setModalData = (img, tags) => {
-  //   this.setState({ showModal: true, modalData: { img, tags } });
-  // };
-
-  // closeModal = () => {
-  //   this.setState({ showModal: false });
-  // };
-  // const { error, isLoader, loadMore, showModal, images, modalData } =
-  //   this.state;
   return (
     <Wrapper>
       <Searchbar onSubmit={handleSubmit}></Searchbar>
