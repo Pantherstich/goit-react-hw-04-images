@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ModalWindow, Overlay } from './Modal.styled';
+import { ModalWindow, Overlay } from 'components/Modal/Modal.styled';
 
 export const Modal = ({ closeModal, modalData }) => {
   useEffect(() => {

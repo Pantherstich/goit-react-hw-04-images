@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Searchbar } from './Searchbar/Searchbar';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { Wrapper, Error } from './App.styled';
-import SearchService from '../services/apiPixaby';
+import SearchService from 'services/apiPixaby.js';
 import { Loader } from './Loader/Loader';
 
 export const App = () => {

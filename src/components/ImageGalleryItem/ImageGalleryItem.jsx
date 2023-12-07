@@ -1,4 +1,7 @@
-import { ImgItem, ImgGalleryItem } from './ImageGalleryItem.styled';
+import {
+  ImgItem,
+  ImgGalleryItem,
+} from 'components/ImageGalleryItem/ImageGalleryItem.styled';
 
 export const ImageGalleryItem = ({ item, onImageClick }) => {
   const handleClick = () => {

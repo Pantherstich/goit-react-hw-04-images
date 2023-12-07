@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
-import { ImagesList } from './ImageGallery.styled';
+import { ImagesList } from 'components/ImageGallery/ImageGallery.styled';
 import { Button } from 'components/Button/Button';
 import { Modal } from 'components/Modal/Modal';
 
