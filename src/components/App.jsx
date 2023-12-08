@@ -56,7 +56,7 @@ export const App = () => {
         })
         .catch(error => {
           setImages([]);
-          setError(error);
+          setError('Oops... there are no images matching your search...');
         })
         .finally(setIsLoader(false));
     }
