@@ -49,8 +49,9 @@ export const App = () => {
             );
             setLoadMore(page < Math.ceil(images.totalHits / 12));
           } else {
-            setImages([]);
-            setError('Oops... there are no images matching your search...');
+            return Promise.reject(
+              new Error('Oops... there are no images matching your search...')
+            );
           }
         })
         .catch(error => {
